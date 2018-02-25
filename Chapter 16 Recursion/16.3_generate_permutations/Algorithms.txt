@@ -1,0 +1,6 @@
+1. Permutation (when no duplicates) - (n!-1) swaps https://en.wikipedia.org/wiki/Heap's_algorithm
+2. Permutation (when no duplicates) - dynamic programming https://stackoverflow.com/questions/9960908/permutations-in-javascript/41068709#41068709
+3. Simple swaps (when no duplicates)
+4. Next_permutation - sorted sequence (duplicates allowed)
+5. O(n!*n^2) time and O(n) space - not sorted sequence (duplicates allowed) https://www.youtube.com/watch?v=nYFd7VHKyWQ
+6. O(n!*n) time and O(n^2) space - not sorted sequence (duplicates allowed) - use of unordered_set

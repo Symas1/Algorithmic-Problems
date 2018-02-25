@@ -1,0 +1,16 @@
+Complexity for Hanoi Tower with Constraint that all moves must include P3 (we move P1->P2)
+1. Tower of Hanoi puzzle can be visualized via graph, where nodes depict a state of the game and edge between two different nodes shows, where the game can go at that point (what move we can make). So the solution to our problem will be the longest non-repetitive way from one edge node to other edge node as graph has 3^n nodes - the longest way = (3^n)-1
+2. To move P1->P2 with constraint that all moves must include P3 we should
+	move n-1 disks above him P1->P2 T(n-1)
+	move 1 disk    P1->P3		1	
+	move n-1 disks P2->P1		T(n-1)
+	move 1 disk    P3->P2		1
+	move n-1 disks P1->P2		T(n-1)
+So, we get :
+3T(n-1) + 2
+3(3T(n-2) + 2) + 2
+9T(n-2) + 6 + 2
+3(9T(n-3) + 6) + 6 + 2
+27T(n-3) + 18 + 6 + 2 == 3^k*T(n-k) + 3^2*2 + 3^1*2 + 3^0*2
+For T(0)=0
+	sum(from k=0 -> to n-1)(3^k*2) = 2*(1-3^(n))/(1-3) = 3^(n) - 1
