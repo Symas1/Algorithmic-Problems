@@ -1,2 +1,1 @@
-# Elements-of-Programming-Interviews
-Solutions and Tests to EPI Problems and Variants
+Solutions and Tests to diverse Algorithmic Problems
