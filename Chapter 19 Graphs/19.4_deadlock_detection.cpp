@@ -84,7 +84,7 @@ void main() {
 		for (int i = 1; i < vertices.size(); ++i) {
 			vertices[i - 1].edges.emplace_back(vertices[i]);
 			vertices[i].edges.emplace_back(vertices[i - 1]);
-			edge_exists[i - 1][i] = edge_exists[i - 1][i] = true;
+			edge_exists[i - 1][i] = edge_exists[i][i-1] = true;
 		}
 		int edges = uniform_int_distribution<>( 1,2 )(mt);
 		edges -= vertices.size() - 1;
